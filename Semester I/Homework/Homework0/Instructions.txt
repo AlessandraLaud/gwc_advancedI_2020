@@ -1,0 +1,4 @@
+1) Create a new file named: Homework0-FirstnameLastname.txt
+2) Write your first name and last name
+3) Add a fun fact about your self
+4) Write your first commit with the message as "Homework0" and push up your first homework to our repo!
