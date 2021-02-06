@@ -1,16 +1,18 @@
-import 'Dog.dart';
-
 main() {
   // operators
   int add = 2 + 2;
   int subtract = 4 - 2;
-  double divide = 4 / 2;
-  int modulus = 4 % 2;
+  double divide = 10 / 4;
+  int mod = 4 % 2;
 
   // relational operators
   bool exp1 = 2 > 7;
   bool exp2 = 6 >= 7;
   bool exp3 = 6 != 2;
+
+  print("exp1: ${exp1}");
+  print("exp2: ${exp2}");
+  print("exp3: ${exp3}");
 
   // logical operators
   bool exp4 = (2 > 4) && (5 > 2);
@@ -18,21 +20,32 @@ main() {
   bool exp6 = (6 >= 3) || (7 < 10);
   bool exp7 = (6 > 5) || (7 <= 10) && (2 < 5) || (4 >= 10);
 
+  print("exp4: ${exp4}");
+  print("exp5: ${exp5}");
+  print("exp6: ${exp6}");
+  print("exp7: ${exp7}");
+
   // control flow
   bool isSunny = false;
   bool isRaining = true;
 
-  if (isSunny) {
-    print("GO OUTSIDE 🌤");
-  } else if (isRaining) {
-    print("Don't forget an umbrella, it's raining 🌧");
+  if (isRaining) {
+    print("Bring an umbrella 🌧 !!!");
+  } else if (isSunny) {
+    print("GO OUTSIDE!! 🌤");
   } else {
-    print("Don't go outside and sleep in.");
+    print("DON'T GO ANYWHERE!");
   }
 
-  // short cut
-  String todaysWeather = isSunny ? "It's sunny today!" : "It's cloudy today";
-  print(todaysWeather);
+  if (isSunny) {
+    print("🌤");
+  } else {
+    print("rain");
+  }
+
+  // if else short cut
+  String todaysWeather = isSunny ? "🌤" : "rain";
+  print("todaysWeather: ${todaysWeather}");
 
   // loops
   for (int i = 0; i < 5; i++) {
@@ -46,16 +59,18 @@ main() {
 
   List<int> addNumbers = [1, 2, 3, 4, 5];
   for (int i = 0; i < addNumbers.length; i++) {
-    // addNumbers[i] = addNumbers[i] + 1;
-    addNumbers[i] += addNumbers[i];
+    addNumbers[i] = addNumbers[i] + 1;
   }
   print(addNumbers);
 
   // for each
   addNumbers.forEach((number) => print(number));
+  addNumbers.forEach((number) {
+    print(number);
+  });
 
   // for-in
-  for (int number in numbers) {
+  for (int number in addNumbers) {
     print(number);
   }
 
@@ -64,8 +79,9 @@ main() {
   while (score <= 4) {
     score++;
     print("score: ${score}");
+
     if (score == 4) {
-      print("you won!");
+      print("You won! Game over.");
     }
   }
 
@@ -73,19 +89,23 @@ main() {
   int counter = 0;
   while (counter < 5) {
     counter++;
-    if (counter == 4) {
-      break;
-    } else if (counter == 2) {
-      continue;
+    if (counter == 2) {
+      break; // stop the loop and break out
     }
   }
 
-  // map iterable
-  addNumbers.map((number) => print(number));
-  // addNumbers.map((number) => print(item)); this is wrong
+  counter = 0;
+  while (counter < 5) {
+    counter++;
+    if (counter == 2) {
+      continue; // continue and restart the loop, do not exeecute the rest of the code in the loop afteer continue
+    }
+    print("hello"); // hello will not be printed if counter == 2
+  }
 
-  List<int> addedNumbers = addNumbers.map((number) => number + 2);
-  print("Added numbers list (+ 2): ${addedNumbers}");
+  // map
+  var numbersList = addNumbers.map((number) => number);
+  print("numbersList: ${numbersList}");
 
   // switch case
   String weather = "sunny";
@@ -102,19 +122,4 @@ main() {
     default:
       print("weather is unknown");
   }
-
-  // throw
-  // throw "I LOVE cats";
-  try {
-    List<int> numbers = [1, 2, 3, 4, 5, 6];
-    print(numbers[-1]);
-  } catch (e) {
-    print(e);
-    // throw Exception("message");
-  }
-
-  // classes
-  Dog spot = Dog("Dalmation", "Black and white", "Spot", 40.00);
-  spot.bark();
-  spot.showInfo();
 }
