@@ -11,4 +11,18 @@
   0-59      F
 */
 
-main() {}
+main() {
+  int studentScore = 0;
+
+  if (studentScore >= 90) {
+    print("Grade: A");
+  } else if (studentScore >= 80 && studentScore <= 89) {
+    print("Grade: B");
+  } else if (studentScore >= 70 && studentScore <= 79) {
+    print("Grade: C");
+  } else if (studentScore >= 50 && studentScore <= 69) {
+    print("Grade: D");
+  } else {
+    print("Grade: F");
+  }
+}
