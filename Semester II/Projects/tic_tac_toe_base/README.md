@@ -39,9 +39,9 @@ The home_page will contain the game widget; if the game is over, the home_page w
     ├── src
     │    ├── models     # Contains the apps models (represents app data)
     │    ├── pages      # Contains the apps pages/views
-         ├── providers  # Contains the apps providers (Changes data and provides data)
-         ├── widgets    # A folder that contains the apps widgeets
-         ├── app.dart   # The app's first view on start
+    │    ├── providers  # Contains the apps providers (Changes data and provides data)
+    │    ├── widgets    # A folder that contains the apps widgets
+    │    ├── app.dart   # The app's first view on start
     │    └── theme.dart # app theme/style
     └── main.dart       # app start
 ```
