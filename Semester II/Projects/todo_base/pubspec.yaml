@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  provider: ^3.0.0
+  provider: ^4.0.0
   cupertino_icons: ^1.0.0
 
 dev_dependencies:
@@ -20,6 +20,10 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   fonts:
+    - family: Dela_Gothic_One
+      fonts:
+        - asset: fonts/Dela_Gothic_One/DelaGothicOne-Regular.ttf
+          weight: 400
     - family: Poppins
       fonts:
         - asset: fonts/Poppins/Poppins-Thin.ttf
