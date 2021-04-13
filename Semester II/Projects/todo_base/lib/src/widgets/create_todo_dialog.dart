@@ -25,7 +25,7 @@ class CreateTodoDialog extends StatelessWidget {
               enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: Colors.grey, width: 1.0),
               ),
-              hintText: 'Todo title',
+              hintText: 'Add todo here...',
             ),
           ),
           SizedBox(height: 20),
