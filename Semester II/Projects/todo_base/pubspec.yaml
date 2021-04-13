@@ -20,10 +20,6 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   fonts:
-    - family: Dela_Gothic_One
-      fonts:
-        - asset: fonts/Dela_Gothic_One/DelaGothicOne-Regular.ttf
-          weight: 400
     - family: Poppins
       fonts:
         - asset: fonts/Poppins/Poppins-Thin.ttf
